@@ -1,11 +1,70 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Gallery</title>
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
-  </head>
-  <body>
-    <!-- have a button POST a click via AJAX -->
-    <button hx-post="/clicked" hx-swap="outerHTML">
-      Click Me
-    </button>
-  </body>
+    <style>
+        /* Basic reset and body styling */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 350px;
+            margin: 0 1em;
+        }
+        header {
+            padding: 1em 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #444;
+            padding: 0.5em 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .cover-image {
+            width: 100%;
+        }
+        .content {
+            padding: 1em 0;
+        }
+        .content h1 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+        .content p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simple Gallery</h1>
+    </header>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a>Page 1</a>
+        <a>Page 2</a>
+    </nav>
+
+    <div><img class="cover-image" src="photos/1.jpg" alt="placeholder image"/></div>
+
+    <div class="content">
+        <h1>Welcome to Simple Gallery</h1>
+        <p>This is a sample description text that provides some information about the website. It’s designed to be viewable on mobile and desktop and is simple, unresponsive, accessible and easy to navigate.</p>
+        <button hx-post="/clicked" hx-swap="outerHTML">
+          Click Me
+        </button>
+    </div>
+</body>
 </html>
