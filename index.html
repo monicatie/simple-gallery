@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--
+    Title
+
+    The <title> is the text that shows up in your browser's tab
+    Learn more at https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title
+  -->
   <title>Simple Gallery</title>
+  <!-- End Title -->
+
   <script src="https://unpkg.com/htmx.org@2.0.3"></script>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,18 +26,42 @@
     <a>Page 2</a>
   </nav>
 
-  <div><img class="cover-image" src="photos/cover.jpg" alt="Cover photo"/></div>
+  <!-- Begin Cover Photo -->
+  <!--
+    src - Describes the path to the image of your cover photo
+    alt - A brief description of the image to help convey the purpose of the    image to screen readers or other assistive technology.
+    Learn more at https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/alt
+  -->
+  <div>
+    <img class="cover-image" src="photos/cover.jpg" alt="Cover photo"/>
+  </div>
+  <!-- End Cover Photo -->
 
   <div class="content">
     <h1>Welcome to Simple Gallery</h1>
     <p>This is a sample description text that provides some information about the website. It’s designed to be viewable on mobile and desktop and is simple, unresponsive, accessible and easy to navigate.</p>
-    <button hx-post="/clicked" hx-swap="outerHTML">
-      Click Me
-    </button>
+
+    <!--
+      Begin Gallery
+
+      Add photos and customize your gallery here.
+      Remember to add in your alt text!
+
+      To add another photo
+      1. Follow the pattern below and copy and paste another
+        <div class="gallery-item">
+            <img src="..." alt="...">
+        </div>
+      2. Add the correct src and alt attributes
+      3. Add tall or wide to the div class to customize how the photo shows up
+
+     -->
     <div class="gallery">
+      <!-- 'wide' photos will span the width of the gallery -->
       <div class="gallery-item wide">
           <img src="photos/1.jpg" alt="Image 1">
       </div>
+      <!-- 'tall' photos will only span half the width -->
       <div class="gallery-item tall">
           <img src="photos/2.jpg" alt="Image 2">
       </div>
@@ -42,6 +75,8 @@
         <img src="photos/5.jpg" alt="Image 5">
       </div>
     </div>
+    <!-- End gallery -->
+
   </div>
 </body>
 </html>
