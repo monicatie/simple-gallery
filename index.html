@@ -13,7 +13,7 @@
   <title>Architecture</title>
   <!-- End Title -->
 
-  <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+  <script src="/script.js"></script>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -55,36 +55,41 @@
     <div class="gallery">
       <!-- 'tall' photos will only span half the width -->
       <div class="gallery-item tall">
-          <img src="photos/2.jpg" alt="Image 2">
+          <img src="photos/2.jpg" alt="Image 2" onclick="showFullPhoto('photos/2.jpg')">
       </div>
       <div class="gallery-item tall">
-          <img src="photos/3.jpg" alt="Image 3">
+          <img src="photos/3.jpg" alt="Image 3" onclick="showFullPhoto('photos/3.jpg')">
       </div>
       <!-- 'wide' photos will span the width of the gallery -->
       <div class="gallery-item wide">
-        <img src="photos/4.jpg" alt="Image 4">
+        <img src="photos/4.jpg" alt="Image 4" onclick="showFullPhoto('photos/4.jpg')">
       </div>
       <div class="gallery-item wide">
-        <img src="photos/5.jpg" alt="Image 5">
+        <img src="photos/5.jpg" alt="" onclick="showFullPhoto('photos/5.jpg')">
       </div>
       <div class="gallery-item tall">
-        <img src="photos/9.jpg" alt="Image 5">
+        <img src="photos/9.jpg" alt="" onclick="showFullPhoto('photos/9.jpg')">
       </div>
       <div class="gallery-item tall">
-        <img src="photos/6.jpg" alt="Image 5">
+        <img src="photos/6.jpg" alt="" onclick="showFullPhoto('photos/6.jpg')">
       </div>
       <div class="gallery-item wide">
-        <img src="photos/7.jpg" alt="Image 5">
+        <img src="photos/7.jpg" alt="" onclick="showFullPhoto('photos/7.jpg')">
       </div>
       <div class="gallery-item tall">
-        <img src="photos/8.jpg" alt="Image 5">
+        <img src="photos/8.jpg" alt="" onclick="showFullPhoto('photos/8.jpg')">
       </div>
       <div class="gallery-item tall">
-        <img src="photos/10.jpg" alt="Image 5">
+        <img src="photos/10.jpg" alt="" onclick="showFullPhoto('photos/10.jpg')">
       </div>
     </div>
     <!-- End gallery -->
 
   </div>
+
+  <dialog id="photoModal" class="dialog">
+    <img id="fullPhoto" src="" />
+    <button id="closeModalButton" onclick="closeModal()">Close</button>
+  </dialog>
 </body>
 </html>
