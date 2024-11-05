@@ -10,21 +10,16 @@
     The <title> is the text that shows up in your browser's tab
     Learn more at https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title
   -->
-  <title>Simple Gallery</title>
+  <title>Architecture</title>
   <!-- End Title -->
 
   <script src="https://unpkg.com/htmx.org@2.0.3"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header>
-    <h1>Simple Gallery</h1>
+    <h1>Architecture</h1>
   </header>
-  <nav>
-    <a href="./index.html">Home</a>
-    <a>Page 1</a>
-    <a>Page 2</a>
-  </nav>
 
   <!-- Begin Cover Photo -->
   <!--
@@ -37,9 +32,10 @@
   </div>
   <!-- End Cover Photo -->
 
-  <div class="content">
-    <h1>Welcome to Simple Gallery</h1>
-    <p>This is a sample description text that provides some information about the website. It’s designed to be viewable on mobile and desktop and is simple, unresponsive, accessible and easy to navigate.</p>
+  <div id="home" class="content">
+    <h2>Cathédrale Notre-Dame-de-Strasbourg</h2>
+    <p>Visited: Nov 23, 2023</p>
+    <p>A Cathedral located in Strasbourg, France</p>
 
     <!--
       Begin Gallery
@@ -57,10 +53,6 @@
 
      -->
     <div class="gallery">
-      <!-- 'wide' photos will span the width of the gallery -->
-      <div class="gallery-item wide">
-          <img src="photos/1.jpg" alt="Image 1">
-      </div>
       <!-- 'tall' photos will only span half the width -->
       <div class="gallery-item tall">
           <img src="photos/2.jpg" alt="Image 2">
@@ -68,11 +60,27 @@
       <div class="gallery-item tall">
           <img src="photos/3.jpg" alt="Image 3">
       </div>
+      <!-- 'wide' photos will span the width of the gallery -->
       <div class="gallery-item wide">
         <img src="photos/4.jpg" alt="Image 4">
       </div>
       <div class="gallery-item wide">
         <img src="photos/5.jpg" alt="Image 5">
+      </div>
+      <div class="gallery-item tall">
+        <img src="photos/9.jpg" alt="Image 5">
+      </div>
+      <div class="gallery-item tall">
+        <img src="photos/6.jpg" alt="Image 5">
+      </div>
+      <div class="gallery-item wide">
+        <img src="photos/7.jpg" alt="Image 5">
+      </div>
+      <div class="gallery-item tall">
+        <img src="photos/8.jpg" alt="Image 5">
+      </div>
+      <div class="gallery-item tall">
+        <img src="photos/10.jpg" alt="Image 5">
       </div>
     </div>
     <!-- End gallery -->
